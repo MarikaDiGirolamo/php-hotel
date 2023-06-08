@@ -14,6 +14,9 @@
 
 <body>
     <main>
+        <!-- Importare array associativo-->
+        <!-- Stampare array associativo -->
+        <!-- Inserire i dati estrapolati all'interno di una table con BOOTSTRAP + relatico Style (magari usare SASS) -->
 
     </main>
 
