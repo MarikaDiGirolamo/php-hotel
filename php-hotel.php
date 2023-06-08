@@ -59,7 +59,14 @@
 
         ?>
         <!-- Stampare array associativo con ciclo FOR EACH-->
-
+        <div>
+            <h1>Lista degli Hotel</h1>
+            <?php foreach ($hotels as $hotel) { ?>
+                <?php foreach ($hotel as $key => $valore) { ?>
+                    <h4> <?php echo "$key : $valore" ?> </h4>
+                <?php } ?>
+            <?php } ?>
+        </div>
 
         <!-- Inserire i dati estrapolati all'interno di una table con BOOTSTRAP + relativo Style (magari usare SASS invece di css) -->
 
