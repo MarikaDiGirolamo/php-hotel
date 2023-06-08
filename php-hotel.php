@@ -58,8 +58,10 @@
         ];
 
         ?>
-        <!-- Stampare array associativo -->
-        <!-- Inserire i dati estrapolati all'interno di una table con BOOTSTRAP + relatico Style (magari usare SASS) -->
+        <!-- Stampare array associativo con ciclo FOR EACH-->
+
+
+        <!-- Inserire i dati estrapolati all'interno di una table con BOOTSTRAP + relativo Style (magari usare SASS invece di css) -->
 
     </main>
 
