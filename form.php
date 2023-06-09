@@ -57,46 +57,36 @@ $hotels = [
 </head>
 
 <body>
-    <div class="container mt-3">
+    <div class="container mt-3 text-center">
         <h1>Cerca il tuo Hotel</h1>
         <form action="php-hotel.php" method="POST">
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome:</label>
                 <select name="nome" id="nome">
                     <option value="nome"></option>
-                    <option value="nome">
-                        <?php foreach ($hotels as $hotelName) { ?>
-                            <?php echo $hotelName["name"] ?>
+
+                    <?php foreach ($hotels as $hotel) { ?>
+                        <option value="nome"><?php echo $hotel['name'] ?></option>
+                    <?php } ?>
                     </option>
-                <?php } ?>
-                </option>
-                <!-- <option value="nome">Optione 2</option>
-                <option value="nome">Optione 3</option>
-                <option value="nome">Optione 4</option>
-                <option value="nome">Optione 5</option> -->
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="Parking" class="form-label">parking:</label>
-                <select name="parking" id="parking">
-                    <option value="parking"></option>
-                    <option value="parking">SI</option>
-                    <option value="parking">NO</option>
                 </select>
             </div>
 
             <div class="mb-3">
                 <label for="Rating" class="form-label">Rating:</label>
-                <select name="rating" id="rating">
-                    <option value=""></option>
-                    <!-- <option value="">1 stella</option>
-                    <option value="">2 stelle</option>
-                    <option value="">3 stelle</option>
-                    <option value="">4 stelle</option>
-                    <option value="">5 stelle</option> -->
-                </select>
+                <input type="number" name="vote">
+                <!-- <?php foreach ($hotels as $hotel) { ?>
+                    <option value="vote"><?php echo $hotel['vote'] ?> </option>
+                <?php } ?> -->
             </div>
+
+            <div class="mb-3">
+                <label for="Parking" class="form-label">Parking:</label>
+                <input type="checkbox">
+            </div>
+
             <button type="submit" class="btn btn-secondary">Invia</button>
+            <button type="reset" class="btn btn-secondary">Cancella</button>
         </form>
     </div>
 </body>
