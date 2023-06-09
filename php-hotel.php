@@ -66,7 +66,7 @@
         <div class="container">
             <div class="col-12">
                 <h1>Elenco degli Hotel</h1>
-                <table class="table table-striped">
+                <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
                             <th scope="col">Name</th>
@@ -78,16 +78,20 @@
 
                     </thead>
                     <tbody>
-                        <tr>
-                            <?php foreach ($hotels as $hotel) { ?>
-                        <tr>
-                            <th scope="col"> <?php echo $hotel['name'] ?> </th>
-                            <td scope="row"><?php echo $hotel['description'] ?> </td>
-                            <td scope="row"><?php echo $hotel['parking'] ?> </td>
-                            <td scope="row"><?php echo $hotel['vote'] ?> </td>
-                            <td scope="row"><?php echo $hotel['distance_to_center'] ?></td>
-                        </tr>
-                    <?php } ?>
+                        <?php foreach ($hotels as $hotel) { ?>
+                            <tr>
+                                <th scope="row"> <?php echo $hotel['name'] ?> </th>
+                                <td scope="row"><?php echo $hotel['description'] ?> </td>
+                                <td scope="row"><?php
+                                                if ($hotel['parking']) {
+                                                    echo "Si";
+                                                } else {
+                                                    echo "NO";
+                                                } ?></td>
+                                <td scope="row"><?php echo $hotel['vote'] ?> </td>
+                                <td scope="row"><?php echo $hotel['distance_to_center'] ?></td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
