@@ -59,6 +59,7 @@
 
         ?>
         <!-- Stampare array associativo con ciclo FOR EACH-->
+        <!-- NON E' AI FINI DELL'ESERCIZIO, SERVE SOLO A ME  -->
         <div class="container">
             <h1>Lista degli Hotel</h1>
             <?php foreach ($hotels as $hotel) { ?>
