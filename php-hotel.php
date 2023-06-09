@@ -59,16 +59,61 @@
 
         ?>
         <!-- Stampare array associativo con ciclo FOR EACH-->
-        <div>
+        <div class="container">
             <h1>Lista degli Hotel</h1>
             <?php foreach ($hotels as $hotel) { ?>
-                <?php foreach ($hotel as $key => $valore) { ?>
-                    <h4> <?php echo "$key : $valore" ?> </h4>
+                <?php foreach ($hotel as $key => $valore) { ?><!--Richiamo tutte le proprietà dell'array in questione-->
+                    <h4> <?php echo "$key : $valore" ?> </h4> <!--Stampo a schermo tutte le proprità dell'array-->
                 <?php } ?>
             <?php } ?>
         </div>
 
         <!-- Inserire i dati estrapolati all'interno di una table con BOOTSTRAP + relativo Style (magari usare SASS invece di css) -->
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Parking</th>
+                        <th scope="col">Rating</th>
+                        <th scope="col">Distance To Center</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="border-1">
+                            <?php foreach ($hotels as $hotel) { ?>
+                                <?php echo $hotel['name'] ?> <br>
+                            <?php } ?>
+
+                        </th>
+
+                        <td class="border-1">
+                            <?php foreach ($hotels as $hotel) { ?>
+                                <?php echo $hotel['description'] ?> <br>
+                            <?php } ?>
+                        </td>
+                        <td class="border-1">
+                            <?php foreach ($hotels as $hotel) { ?>
+                                <?php echo $hotel['parking'] ?> <br>
+                            <?php } ?>
+                        </td>
+                        <td class="border-1">
+                            <?php foreach ($hotels as $hotel) { ?>
+                                <?php echo $hotel['vote'] ?> <br>
+                            <?php } ?>
+                        </td>
+                        <td class="border-1">
+                            <?php foreach ($hotels as $hotel) { ?>
+                                <?php echo $hotel['distance_to_center'] ?> <br>
+                            <?php } ?>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
     </main>
 
